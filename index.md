@@ -14,5 +14,4 @@ I worked on a range of topics from assembly language programming to user interfa
 
 I graduated from the [Computer science department of National Institute of Technology, Warangal](https://www.nitw.ac.in/department/cse/) in 2009 with a Bachelor degree in Computer Science and Engineering.
 
-
-[comment]: <> [test comment]
+Please contact me at my email address: \<lastname\>\<firstname\>@gmail.com
