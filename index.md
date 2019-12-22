@@ -2,10 +2,6 @@
 layout: default
 ---
 
-# Sasidhar Kasturi
-
--------
-
 Thank you for very visiting my homepage. I am a Senior Engineer in the Microsoft Azure Machine Learning team, Bellevue, Washington, USA. I work at various stages of Machine learning pipelines with focus on Feature extraction, selection, synthesis.
 
 I was a Senior Software Engineer in the Converstion Engineering group where I worked on core components of Cortana and Cortana development kit. We used to leverage novel Machine Learning techniques to model human conversations and power Cortana to perform tasks for us. Earlier,  I worked with Microsoft Bing team, Hyderabad where I was part of the relevance team building novel Machine learning techniques to improve relevance of Bing search results.
