@@ -70,6 +70,12 @@ test.describe('Homepage', () => {
     await expect(page.getByText('Microsoft — Azure AI Platform')).toBeVisible();
     await expect(page.getByText('BTech, Computer Science & Engineering')).toBeVisible();
     await expect(page.getByText('JP Morgan Technology Innovation Forum')).toBeVisible();
+    await expect(page.getByText('Bengaluru').first()).toBeVisible();
+  });
+
+  test('city name is standardized to Bengaluru', async ({ page }) => {
+    await expect(page.getByText('Bangalore')).toHaveCount(0);
+    await expect(page.getByText('Bengaluru')).not.toHaveCount(0);
   });
 
   test('old homepage copy is not shown', async ({ page }) => {

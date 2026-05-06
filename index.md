@@ -9,7 +9,7 @@ title: Sasidhar Kasturi
     Applied AI/ML Director<br>
     AI Transformation<br>
     JP Morgan Chase<br>
-    Bangalore, India
+    Bengaluru, India
   </div>
   <div class="sidebar-divider"></div>
   <div class="sidebar-section-label">Contact</div>
@@ -29,7 +29,7 @@ title: Sasidhar Kasturi
       <img src="{{ "/assets/img/profile.png" | relative_url }}" alt="Sasidhar Kasturi" class="profile-photo">
     </div>
     <div class="bio">
-      AI engineering leader with 15+ years building machine learning systems — from Bing and Cortana at Microsoft to agentic AI platforms at JP Morgan Chase. I have worked across India and the United States, leading teams in Hyderabad, Bellevue, Bengaluru, and Bangalore.
+      AI engineering leader with 15+ years building machine learning systems — from Bing and Cortana at Microsoft to agentic AI platforms at JP Morgan Chase. I have worked across India and the United States, leading teams in Hyderabad, Bellevue, and Bengaluru.
     </div>
   </div>
 
@@ -39,7 +39,7 @@ title: Sasidhar Kasturi
       <div class="t-year">2025 – now</div>
       <div class="t-body">
         <div class="t-company">JP Morgan Chase</div>
-        <div class="t-sub">Applied AI/ML Director, AI Transformation · AWM Global Private Bank · Bangalore</div>
+        <div class="t-sub">Applied AI/ML Director, AI Transformation · AWM Global Private Bank · Bengaluru</div>
       </div>
 
       <div class="t-year">2023 – 2025</div>
@@ -103,7 +103,7 @@ title: Sasidhar Kasturi
       <div class="t-year">2026</div>
       <div class="t-body">
         <div class="t-company">JP Morgan Technology Innovation Forum</div>
-        <div class="t-sub">Judge · Bangalore · Evaluated AI startups in security, voice AI, and document intelligence for enterprise applicability in financial services.</div>
+        <div class="t-sub">Judge · Bengaluru · Evaluated AI startups in security, voice AI, and document intelligence for enterprise applicability in financial services.</div>
       </div>
     </div>
   </div>
