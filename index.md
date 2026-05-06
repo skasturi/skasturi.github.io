@@ -9,7 +9,7 @@ title: Sasidhar Kasturi
     Applied AI/ML Director<br>
     AI Transformation<br>
     J.P. Morgan<br>
-    Bengaluru, India
+    Bengaluru
   </div>
   <div class="sidebar-divider"></div>
   <div class="sidebar-section-label">Contact</div>
@@ -45,7 +45,7 @@ title: Sasidhar Kasturi
       <div class="t-year">2023 – 2025</div>
       <div class="t-body">
         <div class="t-company">Microsoft — Azure AI Platform</div>
-        <div class="t-sub">Director · Bengaluru · Model customization, fine-tuning &amp; distillation. Scaled team to 250+ engineers. Partnerships with Meta, Mistral, NVIDIA.</div>
+        <div class="t-sub">Principal Engineering Manager / Director · Bengaluru · Model customization, fine-tuning &amp; distillation. Scaled team to 250+ engineers. Partnerships with Meta, Mistral, NVIDIA.</div>
       </div>
 
       <div class="t-year">2022 – 2023</div>
