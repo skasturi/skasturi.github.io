@@ -1,17 +1,110 @@
 ---
 layout: default
+title: Sasidhar Kasturi
 ---
 
-Thank you for very visiting my homepage. I am a Senior Engineer in the Microsoft Azure Machine Learning team, Bellevue, Washington, USA. I work at various stages of Machine learning pipelines with focus on Feature extraction, selection, synthesis.
+<aside class="sidebar">
+  <div class="sidebar-name">Sasidhar Kasturi</div>
+  <div class="sidebar-title">
+    Applied AI/ML Director<br>
+    AI Transformation<br>
+    JP Morgan Chase<br>
+    Bangalore, India
+  </div>
+  <div class="sidebar-divider"></div>
+  <div class="sidebar-section-label">Contact</div>
+  <div class="sidebar-links">
+    <a href="mailto:kasturisasidhar@gmail.com">kasturisasidhar@gmail.com</a>
+    <a href="https://www.linkedin.com/in/sasidhar">LinkedIn</a>
+  </div>
+  <div class="sidebar-interests">
+    <div class="sidebar-section-label">Interests</div>
+    <p>Agentic AI · LLMs<br>ML Platform Engineering<br>NLP<br><br>Singing · Keyboard<br>Swimming · Programming</p>
+  </div>
+</aside>
 
-I was a Senior Software Engineer in the Converstion Engineering group where I worked on core components of Cortana and Cortana development kit. We used to leverage novel Machine Learning techniques to model human conversations and power Cortana to perform tasks for us. Earlier,  I worked with Microsoft Bing team, Hyderabad where I was part of the relevance team building novel Machine learning techniques to improve relevance of Bing search results.
+<main class="main">
+  <div class="bio-wrap">
+    <div class="photo-wrap">
+      <img src="{{ "/assets/img/profile.png" | relative_url }}" alt="Sasidhar Kasturi" class="profile-photo">
+    </div>
+    <div class="bio">
+      AI engineering leader with 15+ years building machine learning systems — from Bing and Cortana at Microsoft to agentic AI platforms at JP Morgan Chase. I have worked across India and the United States, leading teams in Hyderabad, Bellevue, Bengaluru, and Bangalore.
+    </div>
+  </div>
 
-I have graduated from [Indian Institute of Technology Bombay (IITB)](http://www.iitb.ac.in), Mumbai at the department of computer science and engineering. I am fortunate to have been guided by [Prof. Soumen Chakrabarti](http://www.cse.iitb.ac.in/~soumen). I worked on the project [Curating and Searching the Annotated Web](https://www.cse.iitb.ac.in/~soumen/doc/CSAW/). Part of my thesis was presented as the paper [Compressed Data structures for Annotated Web Search](https://www.cse.iitb.ac.in/~soumen/doc/www2012/Cads.pdf) in the [WWW conference 2012, Lyon, France](http://www2012.wwwconference.org/) main track.
+  <div class="section">
+    <div class="section-label">Experience</div>
+    <div class="timeline">
+      <div class="t-year">2025 – now</div>
+      <div class="t-body">
+        <div class="t-company">JP Morgan Chase</div>
+        <div class="t-sub">Applied AI/ML Director, AI Transformation · AWM Global Private Bank · Bangalore</div>
+      </div>
 
-Before joining IITB, I worked with Microsoft as part of the APEX Program from Jul'09 - Jun'10.
+      <div class="t-year">2023 – 2025</div>
+      <div class="t-body">
+        <div class="t-company">Microsoft — Azure AI Platform</div>
+        <div class="t-sub">Director · Bengaluru · Model customization, fine-tuning &amp; distillation. Scaled team to 250+ engineers. Partnerships with Meta, Mistral, NVIDIA.</div>
+      </div>
 
-I worked on a range of topics from assembly language programming to user interface design.
+      <div class="t-year">2022 – 2023</div>
+      <div class="t-body">
+        <div class="t-company">Microsoft — Azure Machine Learning</div>
+        <div class="t-sub">Principal Engineering Manager · Bengaluru · Founded AzureML India operations; grew from 0 to 37 engineers.</div>
+      </div>
 
-I graduated from the [Computer science department of National Institute of Technology, Warangal](https://www.nitw.ac.in/department/cse/) in 2009 with a Bachelor degree in Computer Science and Engineering.
+      <div class="t-year">2018 – 2021</div>
+      <div class="t-body">
+        <div class="t-company">Microsoft — Azure Machine Learning</div>
+        <div class="t-sub">Senior Software Engineer · Bellevue, WA · AutoML feature engineering, telemetry, PowerBI integration.</div>
+      </div>
 
-Please contact me at my email address: \<lastname\>\<firstname\>@gmail.com
+      <div class="t-year">2015 – 2018</div>
+      <div class="t-body">
+        <div class="t-company">Microsoft — Cortana</div>
+        <div class="t-sub">Senior Software Engineer · Bellevue, WA · Built Cortana Skills Platform from zero; cut developer iteration from one week to two days.</div>
+      </div>
+
+      <div class="t-year">2012 – 2015</div>
+      <div class="t-body">
+        <div class="t-company">Microsoft — Bing</div>
+        <div class="t-sub">Software Engineer II · Hyderabad · Entity intent mapping for search relevance; ML models for Cortana Translation.</div>
+      </div>
+
+      <div class="t-year">2009 – 2010</div>
+      <div class="t-body">
+        <div class="t-company">Microsoft — APEX Program</div>
+        <div class="t-sub">Software Engineer · Hyderabad · Excellence in Execution award.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Education</div>
+    <div class="timeline">
+      <div class="t-year">2010 – 2012</div>
+      <div class="t-body">
+        <div class="t-company">IIT Bombay</div>
+        <div class="t-sub">MTech, Computer Science · Advisor: <a href="http://www.cse.iitb.ac.in/~soumen">Prof. Soumen Chakrabarti</a> · <a href="https://www.cse.iitb.ac.in/~soumen/doc/www2012/Cads.pdf">Compressed Data Structures for Annotated Web Search</a>, WWW 2012, Lyon · Google Travel Grant</div>
+      </div>
+
+      <div class="t-year">2005 – 2009</div>
+      <div class="t-body">
+        <div class="t-company">NIT Warangal</div>
+        <div class="t-sub">BTech, Computer Science &amp; Engineering</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Engagement</div>
+    <div class="timeline">
+      <div class="t-year">2026</div>
+      <div class="t-body">
+        <div class="t-company">JP Morgan Technology Innovation Forum</div>
+        <div class="t-sub">Judge · Bangalore · Evaluated AI startups in security, voice AI, and document intelligence for enterprise applicability in financial services.</div>
+      </div>
+    </div>
+  </div>
+</main>

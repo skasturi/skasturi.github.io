@@ -1,4 +1,245 @@
 ---
 ---
 
-@import "{{ site.theme }}";
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #ffffff;
+  --sidebar-bg: #f5f5f7;
+  --ink: #1d1d1f;
+  --ink-mid: #3d3d3f;
+  --ink-light: #6e6e73;
+  --accent: #0071e3;
+  --border: #d2d2d7;
+  --sidebar-w: 240px;
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  display: flex;
+  font-family: var(--font);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.sidebar {
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 52px 28px 44px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-w);
+}
+
+.sidebar-name {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+.sidebar-title {
+  color: var(--ink-light);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.sidebar-divider {
+  background: var(--border);
+  height: 1px;
+  margin-bottom: 28px;
+}
+
+.sidebar-section-label {
+  color: var(--ink-light);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: auto;
+}
+
+.sidebar-links a,
+.t-sub a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.sidebar-links a {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.sidebar-links a:hover,
+.t-sub a:hover {
+  text-decoration: underline;
+}
+
+.sidebar-interests {
+  margin-top: 36px;
+}
+
+.sidebar-interests p {
+  color: var(--ink-light);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.main {
+  flex: 1;
+  max-width: 720px;
+  margin-left: calc(var(--sidebar-w) + max(24px, (100vw - var(--sidebar-w) - 720px) / 2));
+  padding: 52px 0 80px;
+  width: min(720px, calc(100vw - var(--sidebar-w) - 48px));
+}
+
+.photo-wrap {
+  float: right;
+  margin: 4px 0 24px 36px;
+}
+
+.profile-photo {
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: block;
+  width: 140px;
+}
+
+.bio-wrap::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.bio {
+  color: var(--ink-mid);
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: -0.1px;
+  line-height: 1.7;
+  margin-bottom: 44px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section-label {
+  border-bottom: 1px solid var(--border);
+  color: var(--ink-light);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.timeline {
+  display: grid;
+  gap: 0;
+  grid-template-columns: 86px 1fr;
+}
+
+.t-year {
+  color: var(--ink-light);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 400;
+  line-height: 1.5;
+  padding-top: 2px;
+}
+
+.t-body {
+  padding-bottom: 18px;
+}
+
+.t-company {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.1px;
+  margin-bottom: 2px;
+}
+
+.t-sub {
+  color: var(--ink-light);
+  font-size: 12.5px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+@media (max-width: 720px) {
+  body {
+    display: block;
+  }
+
+  .sidebar {
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+    min-height: auto;
+    padding: 28px 24px;
+    position: static;
+    width: 100%;
+  }
+
+  .sidebar-links {
+    margin-bottom: 0;
+  }
+
+  .sidebar-interests {
+    margin-top: 24px;
+  }
+
+  .main {
+    margin-left: 0;
+    max-width: none;
+    padding: 32px 24px 56px;
+    width: auto;
+  }
+
+  .photo-wrap {
+    float: none;
+    margin: 0 0 24px;
+  }
+
+  .profile-photo {
+    margin: 0 auto;
+  }
+
+  .bio {
+    font-size: 16px;
+  }
+
+  .timeline {
+    grid-template-columns: 72px 1fr;
+  }
+}
