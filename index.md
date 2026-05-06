@@ -57,13 +57,13 @@ title: Sasidhar Kasturi
       <div class="t-year">2018 – 2021</div>
       <div class="t-body">
         <div class="t-company">Microsoft — Azure Machine Learning</div>
-        <div class="t-sub">Senior Software Engineer · Bellevue, WA · AutoML feature engineering, telemetry, PowerBI integration.</div>
+        <div class="t-sub">Senior Software Engineer · Bellevue · AutoML feature engineering, telemetry, PowerBI integration.</div>
       </div>
 
       <div class="t-year">2015 – 2018</div>
       <div class="t-body">
         <div class="t-company">Microsoft — Cortana</div>
-        <div class="t-sub">Senior Software Engineer · Bellevue, WA · Built Cortana Skills Platform from zero; cut developer iteration from one week to two days.</div>
+        <div class="t-sub">Senior Software Engineer · Bellevue · Built Cortana Skills Platform from zero; cut developer iteration from one week to two days.</div>
       </div>
 
       <div class="t-year">2012 – 2015</div>
