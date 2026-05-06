@@ -69,7 +69,7 @@ test.describe('Homepage', () => {
     await expect(page.getByText('AI engineering leader with 15+ years building machine learning systems')).toBeVisible();
     await expect(page.getByText('Microsoft — Azure AI Platform')).toBeVisible();
     await expect(page.getByText('BTech, Computer Science & Engineering')).toBeVisible();
-    await expect(page.getByText('JP Morgan Technology Innovation Forum')).toBeVisible();
+    await expect(page.getByText('J.P. Morgan Technology Innovation Forum')).toBeVisible();
     await expect(page.getByText('Bengaluru').first()).toBeVisible();
   });
 
