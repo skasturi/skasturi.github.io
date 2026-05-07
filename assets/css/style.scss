@@ -15,6 +15,7 @@
   --ink-light: #6e6e73;
   --accent: #0071e3;
   --border: #d2d2d7;
+  --chip-bg: #f8f8fa;
   --sidebar-w: 240px;
   --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
   --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif;
@@ -45,6 +46,10 @@ body {
   top: 0;
   left: 0;
   width: var(--sidebar-w);
+}
+
+.mobile-photo-wrap {
+  display: none;
 }
 
 .sidebar-name {
@@ -88,7 +93,7 @@ body {
 }
 
 .sidebar-links a,
-.t-sub a {
+.t-impact a {
   color: var(--accent);
   text-decoration: none;
 }
@@ -99,7 +104,7 @@ body {
 }
 
 .sidebar-links a:hover,
-.t-sub a:hover {
+.t-impact a:hover {
   text-decoration: underline;
 }
 
@@ -115,15 +120,15 @@ body {
 
 .main {
   flex: 1;
-  max-width: 720px;
-  margin-left: calc(var(--sidebar-w) + max(24px, (100vw - var(--sidebar-w) - 720px) / 2));
+  max-width: 780px;
+  margin-left: calc(var(--sidebar-w) + 88px);
   padding: 52px 0 80px;
-  width: min(720px, calc(100vw - var(--sidebar-w) - 48px));
+  width: min(780px, calc(100vw - var(--sidebar-w) - 128px));
 }
 
 .photo-wrap {
   float: right;
-  margin: 4px 0 24px 36px;
+  margin: 4px 0 22px 34px;
 }
 
 .profile-photo {
@@ -133,19 +138,53 @@ body {
   width: 140px;
 }
 
-.bio-wrap::after {
+.hero::after {
   clear: both;
   content: "";
   display: table;
 }
 
-.bio {
+.hero {
+  margin-bottom: 36px;
+}
+
+.hero-title {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 650;
+  letter-spacing: -0.4px;
+  line-height: 1.12;
+  margin-bottom: 12px;
+  max-width: 560px;
+}
+
+.hero-subtitle {
   color: var(--ink-mid);
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: -0.1px;
-  line-height: 1.7;
-  margin-bottom: 44px;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.proof-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.proof-chips span {
+  background: var(--chip-bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--ink-mid);
+  display: inline-flex;
+  font-size: 12px;
+  line-height: 1;
+  padding: 8px 10px;
+  white-space: nowrap;
 }
 
 .section {
@@ -190,11 +229,20 @@ body {
   margin-bottom: 2px;
 }
 
-.t-sub {
+.t-role,
+.t-impact {
   color: var(--ink-light);
   font-size: 12.5px;
   font-weight: 400;
   line-height: 1.6;
+}
+
+.t-role {
+  margin-bottom: 2px;
+}
+
+.t-impact {
+  color: var(--ink-mid);
 }
 
 @media (max-width: 720px) {
@@ -205,41 +253,130 @@ body {
   .sidebar {
     border-right: 0;
     border-bottom: 1px solid var(--border);
+    column-gap: 14px;
+    display: grid;
+    grid-template-columns: 72px 1fr;
     min-height: auto;
-    padding: 28px 24px;
+    padding: 20px 24px;
     position: static;
+    row-gap: 0;
     width: 100%;
   }
 
+  .mobile-photo-wrap {
+    display: block;
+    grid-row: 1 / span 4;
+  }
+
+  .mobile-photo-wrap .profile-photo {
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
+    width: 72px;
+  }
+
+  .sidebar-name,
+  .sidebar-title,
+  .sidebar-divider,
+  .sidebar-section-label,
+  .sidebar-links,
+  .sidebar-interests {
+    grid-column: 2;
+  }
+
+  .sidebar-name {
+    align-self: end;
+    font-size: 19px;
+    margin-bottom: 4px;
+  }
+
+  .sidebar-title {
+    font-size: 12px;
+    line-height: 1.45;
+    margin-bottom: 10px;
+  }
+
+  .sidebar-divider,
+  .sidebar-interests {
+    display: none;
+  }
+
+  .sidebar-section-label {
+    display: none;
+  }
+
   .sidebar-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
     margin-bottom: 0;
   }
 
-  .sidebar-interests {
-    margin-top: 24px;
+  .sidebar-links a {
+    font-size: 12px;
   }
 
   .main {
     margin-left: 0;
     max-width: none;
-    padding: 32px 24px 56px;
+    padding: 28px 24px 56px;
     width: auto;
   }
 
   .photo-wrap {
-    float: none;
-    margin: 0 0 24px;
+    display: none;
   }
 
-  .profile-photo {
-    margin: 0 auto;
+  .hero {
+    margin-bottom: 32px;
   }
 
-  .bio {
-    font-size: 16px;
+  .hero-title {
+    font-size: 28px;
+    line-height: 1.12;
+    margin-bottom: 10px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .proof-chips {
+    gap: 7px;
+    margin-top: 16px;
+  }
+
+  .proof-chips span {
+    font-size: 11px;
+    padding: 7px 9px;
   }
 
   .timeline {
-    grid-template-columns: 72px 1fr;
+    display: block;
+  }
+
+  .t-year {
+    font-size: 11px;
+    padding-top: 0;
+  }
+
+  .t-body {
+    border-bottom: 1px solid #ececf0;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+  }
+
+  .timeline .t-body:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .t-company {
+    font-size: 15px;
+    margin-top: 3px;
+  }
+
+  .t-role,
+  .t-impact {
+    font-size: 13px;
   }
 }

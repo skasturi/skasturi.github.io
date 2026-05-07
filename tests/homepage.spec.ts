@@ -15,28 +15,30 @@ test.describe('Homepage', () => {
   });
 
   test('profile photo is visible and not broken', async ({ page }) => {
-    const photo = page.locator('img.profile-photo');
+    const photo = page.locator('.photo-wrap img.profile-photo');
     await expect(photo).toBeVisible();
     const naturalWidth = await photo.evaluate((el: HTMLImageElement) => el.naturalWidth);
     expect(naturalWidth).toBeGreaterThan(0);
   });
 
-  test('Apple-style sidebar is visible on desktop', async ({ page }) => {
+  test('compact sidebar is visible on desktop and closer to main content', async ({ page }) => {
     const sidebar = page.locator('.sidebar');
     await expect(sidebar).toBeVisible();
 
     await expect(sidebar).toHaveCSS('position', 'fixed');
     await expect(sidebar).toHaveCSS('background-color', 'rgb(245, 245, 247)');
+    const sidebarBox = await sidebar.boundingBox();
     const mainBox = await page.locator('.main').boundingBox();
-    const viewport = page.viewportSize();
 
+    expect(sidebarBox).not.toBeNull();
     expect(mainBox).not.toBeNull();
-    expect(viewport).not.toBeNull();
-    expect(Math.abs(mainBox!.x + mainBox!.width / 2 - (240 + (viewport!.width - 240) / 2))).toBeLessThan(8);
+    const gap = mainBox!.x - (sidebarBox!.x + sidebarBox!.width);
+    expect(gap).toBeGreaterThanOrEqual(72);
+    expect(gap).toBeLessThanOrEqual(112);
   });
 
   test('profile photo floats to the right on desktop', async ({ page }) => {
-    const photo = page.locator('img.profile-photo');
+    const photo = page.locator('.photo-wrap img.profile-photo');
     const box = await photo.boundingBox();
     const viewport = page.viewportSize();
     expect(box).not.toBeNull();
@@ -44,19 +46,21 @@ test.describe('Homepage', () => {
     expect(box!.x).toBeGreaterThan(viewport!.width / 2);
   });
 
-  test('profile photo is centered above content on mobile', async ({ page }) => {
+  test('profile photo is part of compact mobile identity block', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto('/');
 
-    const photo = page.locator('img.profile-photo');
+    const photo = page.locator('.mobile-photo-wrap img.profile-photo');
     const sidebar = page.locator('.sidebar');
     const box = await photo.boundingBox();
     const viewport = page.viewportSize();
 
     await expect(sidebar).toHaveCSS('position', 'static');
+    await expect(sidebar).toHaveCSS('display', 'grid');
     expect(box).not.toBeNull();
     expect(viewport).not.toBeNull();
-    expect(Math.abs(box!.x + box!.width / 2 - viewport!.width / 2)).toBeLessThan(8);
+    expect(box!.x).toBeLessThan(viewport!.width / 2);
+    expect(box!.width).toBeLessThanOrEqual(96);
   });
 
   test('name is present on page', async ({ page }) => {
@@ -64,13 +68,29 @@ test.describe('Homepage', () => {
   });
 
   test('career and education summary is visible', async ({ page }) => {
-    await expect(page.getByText('Applied AI/ML Director, AI Transformation')).toBeVisible();
+    await expect(page.getByText('Hands-on AI engineering leader').first()).toBeVisible();
+    await expect(page.getByText('Driving AI transformation through model platforms, agentic systems, and applied AI capabilities')).toBeVisible();
+    await expect(page.locator('.proof-chips').getByText('250+ engineers', { exact: true })).toBeVisible();
+    await expect(page.locator('.proof-chips').getByText('0 to 37 team build', { exact: true })).toBeVisible();
+    await expect(page.locator('.proof-chips').getByText('LLM customization', { exact: true })).toBeVisible();
+    await expect(page.getByText('AI transformation').first()).toBeVisible();
+    await expect(page.getByText('Applied AI/ML Director · AI Transformation')).toBeVisible();
     await expect(page.getByText('AWM Global Private Bank')).toBeVisible();
-    await expect(page.getByText('AI engineering leader with 15+ years building machine learning systems')).toBeVisible();
+    await expect(page.getByText('regulated enterprise AI adoption')).toBeVisible();
     await expect(page.getByText('Microsoft — Azure AI Platform')).toBeVisible();
+    await expect(page.getByText('model customization, fine-tuning, distillation')).toBeVisible();
     await expect(page.getByText('BTech, Computer Science & Engineering')).toBeVisible();
     await expect(page.getByText('J.P. Morgan Technology Innovation Forum')).toBeVisible();
     await expect(page.getByText('Bengaluru').first()).toBeVisible();
+  });
+
+  test('experience stacks into readable entries on mobile', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto('/');
+
+    await expect(page.locator('.timeline').first()).toHaveCSS('display', 'block');
+    await expect(page.getByText('regulated enterprise AI adoption')).toBeVisible();
+    await expect(page.getByText('model customization, fine-tuning, distillation')).toBeVisible();
   });
 
   test('city name is standardized to Bengaluru', async ({ page }) => {
@@ -100,6 +120,7 @@ test.describe('Homepage', () => {
   test('contact email is visible', async ({ page }) => {
     await expect(page.getByText('kasturisasidhar@gmail.com')).toBeVisible();
     await expect(page.getByRole('link', { name: 'LinkedIn' })).toHaveAttribute('href', 'https://www.linkedin.com/in/sasidhar');
+    await expect(page.getByRole('link', { name: 'GitHub' })).toHaveAttribute('href', 'https://github.com/skasturi');
   });
 
   test('screenshot for visual reference', async ({ page }) => {
