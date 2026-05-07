@@ -15,7 +15,8 @@ test.describe('Homepage', () => {
   });
 
   test('profile photo is visible and not broken', async ({ page }) => {
-    const photo = page.locator('.photo-wrap img.profile-photo');
+    await expect(page.locator('img.profile-photo')).toHaveCount(1);
+    const photo = page.locator('img.profile-photo');
     await expect(photo).toBeVisible();
     const naturalWidth = await photo.evaluate((el: HTMLImageElement) => el.naturalWidth);
     expect(naturalWidth).toBeGreaterThan(0);
@@ -38,7 +39,7 @@ test.describe('Homepage', () => {
   });
 
   test('profile photo floats to the right on desktop', async ({ page }) => {
-    const photo = page.locator('.photo-wrap img.profile-photo');
+    const photo = page.locator('img.profile-photo');
     const box = await photo.boundingBox();
     const viewport = page.viewportSize();
     expect(box).not.toBeNull();
@@ -50,7 +51,7 @@ test.describe('Homepage', () => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto('/');
 
-    const photo = page.locator('.mobile-photo-wrap img.profile-photo');
+    const photo = page.locator('img.profile-photo');
     const sidebar = page.locator('.sidebar');
     const box = await photo.boundingBox();
     const viewport = page.viewportSize();
@@ -59,8 +60,9 @@ test.describe('Homepage', () => {
     await expect(sidebar).toHaveCSS('display', 'grid');
     expect(box).not.toBeNull();
     expect(viewport).not.toBeNull();
-    expect(box!.x).toBeLessThan(viewport!.width / 2);
-    expect(box!.width).toBeLessThanOrEqual(96);
+    expect(box!.x).toBeGreaterThan(0);
+    expect(box!.x + box!.width).toBeLessThan(viewport!.width);
+    expect(box!.width).toBeLessThanOrEqual(140);
   });
 
   test('name is present on page', async ({ page }) => {

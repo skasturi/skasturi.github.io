@@ -48,10 +48,6 @@ body {
   width: var(--sidebar-w);
 }
 
-.mobile-photo-wrap {
-  display: none;
-}
-
 .sidebar-name {
   color: var(--ink);
   font-family: var(--font-display);
@@ -263,16 +259,6 @@ body {
     width: 100%;
   }
 
-  .mobile-photo-wrap {
-    display: block;
-    grid-row: 1 / span 4;
-  }
-
-  .mobile-photo-wrap .profile-photo {
-    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
-    width: 72px;
-  }
-
   .sidebar-name,
   .sidebar-title,
   .sidebar-divider,
@@ -322,7 +308,12 @@ body {
   }
 
   .photo-wrap {
-    display: none;
+    float: none;
+    margin: 0 0 18px;
+  }
+
+  .profile-photo {
+    width: 96px;
   }
 
   .hero {

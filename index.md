@@ -4,9 +4,6 @@ title: Sasidhar Kasturi
 ---
 
 <aside class="sidebar">
-  <div class="mobile-photo-wrap">
-    <img src="{{ "/assets/img/profile.png" | relative_url }}" alt="Sasidhar Kasturi" class="profile-photo">
-  </div>
   <div class="sidebar-name">Sasidhar Kasturi</div>
   <div class="sidebar-title">
     Hands-on AI engineering leader<br>
